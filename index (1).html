@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sherry | Tailored Suits &amp; Coats, UK &amp; USA</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f1a30;--wine:#14213d;--amber:#b8923a;--bg:#f7f3ea;--card:#fffdf8;--line:#e3dccb;--mut:#675f52}
+*{box-sizing:border-box;margin:0}
+body{font:16px/1.55 Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+h1,h2,h3,.logo{font-family:'Bodoni Moda',Georgia,serif}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.wrap{max-width:1120px;margin:auto;padding:0 18px}
+.top{background:var(--wine);color:#fff;font-size:13px;text-align:center;padding:7px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:14px;height:64px}
+.logo{font-size:30px;font-weight:700;color:var(--wine);letter-spacing:.5px}
+nav{display:flex;gap:16px;margin-left:10px}
+nav a{padding:4px 0;border-bottom:2px solid transparent}
+nav a.on{border-color:var(--amber)}
+.sp{flex:1}
+#q{border:1px solid var(--line);border-radius:22px;padding:8px 14px;width:200px;background:#fff}
+.ib{background:none;border:1px solid var(--line);border-radius:22px;padding:7px 12px;cursor:pointer;background:#fff}
+.btn{background:var(--wine);color:#fff;border:0;border-radius:6px;padding:11px 18px;cursor:pointer;font-weight:700}
+.btn.alt{background:#25d366;color:#053}
+.btn.gh{background:#fff;color:var(--wine);border:1px solid var(--wine)}
+.btn.sm{padding:6px 10px;font-size:13px}
+.hero{background:linear-gradient(120deg,var(--wine),#0a1226);color:#fff;padding:70px 0}
+.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.1;max-width:640px}
+.hero p{margin:16px 0 24px;max-width:480px;opacity:.85}
+.hero .btn{background:var(--amber)}
+section{padding:34px 0}
+h2{font-size:28px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.card img,.ph{width:100%;aspect-ratio:1;object-fit:cover;background:#eee4da;cursor:pointer;display:block}
+.cb{padding:12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pr{font-weight:700;color:var(--wine)}
+.old{color:var(--mut);text-decoration:line-through;font-weight:400;margin-left:6px}
+.mut{color:var(--mut);font-size:14px}
+.heart{position:absolute;top:8px;right:8px;background:#fff;border:0;border-radius:50%;width:34px;height:34px;cursor:pointer;font-size:18px}
+.rel{position:relative}
+.cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.col{background:var(--wine);color:#fff;border-radius:8px;padding:34px 20px;cursor:pointer;font-family:'Bodoni Moda',serif;font-size:22px}
+.col:nth-child(even){background:var(--amber)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;cursor:pointer}
+.chip.on{background:var(--wine);color:#fff}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.row{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.row img,.row .ph{width:64px;height:64px;border-radius:6px;cursor:default}
+.box{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px;margin-bottom:14px}
+label{display:block;font-size:13px;color:var(--mut);margin-top:10px}
+input,select,textarea{width:100%;border:1px solid var(--line);border-radius:6px;padding:9px;background:#fff}
+.tag{display:inline-block;background:#eee4da;border-radius:12px;padding:2px 10px;font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{padding:8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+footer{background:var(--ink);color:#ddd;padding:30px 0;margin-top:30px}
+footer a{margin-right:16px;text-decoration:underline}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:6px;display:none;z-index:9}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+@media(max-width:760px){.two{grid-template-columns:1fr}#q{width:110px}nav{display:none}.mnav{display:flex!important}}
+.mnav{display:none;gap:14px;overflow:auto;padding:8px 18px;border-bottom:1px solid var(--line)}
+</style>
+</head>
+<body>
+<!-- ====== EDIT THESE ====== -->
+<script>
+const CFG={
+ brand:'Sherry',
+ whatsapp:'447000000000',
+ paypal:'https://paypal.me/YOURNAME', // your PayPal.me link
+ payoneer:'YOUR PAYONEER EMAIL', // shown to customers
+ // number with country code, no + or spaces
+ facebook:'https://facebook.com/',
+ youtube:'https://youtube.com/',
+ waChannel:'https://whatsapp.com/channel/',
+ adminPass:'admin123' // change in Admin > Settings
+};
+</script>
+<div class="top">Free delivery on suits across the UK &amp; USA over £150 / $190 · 30-day returns</div>
+<header><div class="wrap bar">
+ <a class="logo" href="#home" id="logo">Sherry</a>
+ <nav id="nav"></nav><span class="sp"></span>
+ <input id="q" type="search" placeholder="Search products" aria-label="Search">
+ <button class="ib" id="cur" title="Currency"></button>
+ <a class="ib" href="#favs">♥ <span id="fc">0</span></a>
+ <a class="ib" href="#cart">Bag <span id="cc">0</span></a>
+</div><div class="mnav" id="mnav"></div></header>
+<main id="app"></main>
+<footer><div class="wrap">
+ <h3 style="color:#fff;font-size:22px">Sherry</h3>
+ <p class="mut" style="color:#bbb;margin:6px 0 14px">Three-piece suits, overcoats and tailoring for the UK and USA.</p>
+ <div id="soc"></div>
+ <div id="fl" style="margin-top:12px"></div><p class="mut" style="color:#999;margin-top:14px">© <span id="yr"></span> Sherry. <a href="#admin" style="margin:0">Admin</a></p>
+</div></footer>
+<div id="toast"></div>
+<script>
+const $=s=>document.querySelector(s);
+const L=(k,d)=>{try{return JSON.parse(localStorage.getItem('sh_'+k))??d}catch(e){return d}};
+const S=(k,v)=>{try{localStorage.setItem('sh_'+k,JSON.stringify(v))}catch(e){toast('Storage full: use smaller images')}};
+const seed=[
+ {id:'p1',name:'Navy Three-Piece Suit',gbp:189,usd:239,old:249,cat:'Three-Piece Suits',col:'Wedding',desc:'Jacket, waistcoat and trousers in a wool-blend navy. Slim fit.',img:''},
+ {id:'p2',name:'Charcoal Herringbone Three-Piece',gbp:199,usd:249,old:0,cat:'Three-Piece Suits',col:'Business',desc:'Classic herringbone, fully lined, with a fitted waistcoat.',img:''},
+ {id:'p3',name:'Black Tuxedo Three-Piece',gbp:219,usd:275,old:0,cat:'Three-Piece Suits',col:'Wedding',desc:'Satin lapels for black-tie evenings and weddings.',img:''},
+ {id:'p4',name:'Camel Wool Overcoat',gbp:159,usd:199,old:189,cat:'Coats',col:'Winter',desc:'Long, warm and tailored. A winter staple.',img:''},
+ {id:'p5',name:'Navy Peaky-Style Overcoat',gbp:149,usd:189,old:0,cat:'Coats',col:'Winter',desc:'Heavy tweed-look coat with a wide collar.',img:''},
+ {id:'p6',name:'Grey Blazer &amp; Trousers',gbp:129,usd:165,old:0,cat:'Two-Piece Suits',col:'Business',desc:'Smart two-piece for the office and events.',img:''}
+];
+let P=L('products',seed),O=L('orders',[]),F=L('favs',[]),C=L('cart',[]),cur=L('cur','GBP'),cfg=Object.assign({},CFG,L('cfg',{}));
+const sym=()=>cur=='GBP'?'£':'$';
+const price=p=>sym()+(cur=='GBP'?p.gbp:p.usd).toFixed(2);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function toast(m){const t=$('#toast');t.textContent=m;t.style.display='block';clearTimeout(t.t);t.t=setTimeout(()=>t.style.display='none',2200)}
+const img=p=>p.img?`<img src="${esc(p.img)}" alt="${esc(p.name)}" onclick="go('#p/${p.id}')">`:`<div class="ph" onclick="go('#p/${p.id}')" style="display:grid;place-items:center;font:700 40px 'Bodoni Moda';color:#c9b8a6">${esc(p.name[0])}</div>`;
+const go=h=>location.hash=h;
+function card(p){return `<div class="card"><div class="rel">${img(p)}<button class="heart" aria-label="Favourite" onclick="fav('${p.id}')">${F.includes(p.id)?'♥':'♡'}</button></div><div class="cb"><span class="mut">${esc(p.cat)}</span><a href="#p/${p.id}"><b>${esc(p.name)}</b></a><div class="pr">${price(p)}${p.old?`<span class="old">${sym()}${cur=='GBP'?p.old:Math.round(p.old*1.25)}</span>`:''}</div><button class="btn sm" onclick="add('${p.id}')">Add to bag</button></div></div>`}
+function fav(id){F=F.includes(id)?F.filter(x=>x!=id):[...F,id];S('favs',F);head();route()}
+function add(id,n=1){const i=C.find(c=>c.id==id);i?i.n+=n:C.push({id,n});S('cart',C);head();toast('Added to bag')}
+function head(){$('#fc').textContent=F.length;$('#cc').textContent=C.reduce((a,c)=>a+c.n,0);$('#cur').textContent=cur=='GBP'?'£ GBP':'$ USD';
+ const l=[['home','Home'],['shop','Shop'],['collections','Collections'],['orders','My orders']];
+ const h=location.hash.split('/')[0].slice(1)||'home';
+ $('#nav').innerHTML=l.map(x=>`<a href="#${x[0]}" class="${h==x[0]?'on':''}">${x[1]}</a>`).join('');
+ $('#mnav').innerHTML=l.map(x=>`<a href="#${x[0]}">${x[1]}</a>`).join('');
+ $('#fl').innerHTML=[['privacy','Privacy policy'],['returns','Returns &amp; shipping'],['terms','Terms'],['about','About'],['contact','Contact']].map(x=>`<a href="#${x[0]}">${x[1]}</a>`).join('');
+ $('#soc').innerHTML=`<a href="${esc(cfg.facebook)}" target="_blank" rel="noopener">Facebook</a><a href="${esc(cfg.youtube)}" target="_blank" rel="noopener">YouTube</a><a href="${esc(cfg.waChannel)}" target="_blank" rel="noopener">WhatsApp Channel</a><a href="https://wa.me/${esc(cfg.whatsapp)}" target="_blank" rel="noopener">WhatsApp chat</a>`}
+$('#cur').onclick=()=>{cur=cur=='GBP'?'USD':'GBP';S('cur',cur);head();route()};
+$('#q').addEventListener('keydown',e=>{if(e.key=='Enter')go('#search/'+encodeURIComponent(e.target.value))});
+$('#yr').textContent=new Date().getFullYear();
+const cats=()=>[...new Set(P.map(p=>p.cat))],colls=()=>[...new Set(P.map(p=>p.col).filter(Boolean))];
+
+const V={
+home(){const f=P.slice(0,8);return `<div class="hero"><div class="wrap"><h1>Three-piece suits and coats, cut the British way.</h1><p>Sharp tailoring, fine fabrics and fast delivery to the UK and USA.</p><a class="btn" href="#shop">Shop suits &amp; coats</a></div></div>
+<section class="wrap"><div class="cols" style="text-align:center"><div class="box"><b>Free UK &amp; USA delivery</b><div class="mut">On orders over £150 / $190</div></div><div class="box"><b>30-day returns</b><div class="mut">Simple and clear</div></div><div class="box"><b>Order your way</b><div class="mut">Website or WhatsApp</div></div></div></section>\n<section class="wrap"><h2>Collections</h2><div class="cols">${colls().map(c=>`<div class="col" onclick="go('#collection/${encodeURIComponent(c)}')">${esc(c)}</div>`).join('')}</div></section>
+<section class="wrap"><h2>Featured</h2><div class="grid">${f.map(card).join('')}</div></section>`},
+shop(a,list){list=list||P;const ct=decodeURIComponent(a||'');const l=ct?list.filter(p=>p.cat==ct):list;
+ return `<section class="wrap"><h2>${ct||'Shop'}</h2><div class="chips"><span class="chip ${!ct?'on':''}" onclick="go('#shop')">All</span>${cats().map(c=>`<span class="chip ${c==ct?'on':''}" onclick="go('#shop/${encodeURIComponent(c)}')">${esc(c)}</span>`).join('')}</div><div class="grid">${l.map(card).join('')||'<p class="mut">No products found.</p>'}</div></section>`},
+collections(){return `<section class="wrap"><h2>Collections</h2><div class="cols">${colls().map(c=>`<div class="col" onclick="go('#collection/${encodeURIComponent(c)}')">${esc(c)}<div class="mut" style="color:#fff;font:14px Manrope">${P.filter(p=>p.col==c).length} items</div></div>`).join('')}</div></section>`},
+collection(a){const c=decodeURIComponent(a);return `<section class="wrap"><h2>${esc(c)}</h2><div class="grid">${P.filter(p=>p.col==c).map(card).join('')}</div></section>`},
+search(a){const q=decodeURIComponent(a||'').toLowerCase();const l=P.filter(p=>(p.name+p.cat+p.col+p.desc).toLowerCase().includes(q));return `<section class="wrap"><h2>Results for “${esc(q)}”</h2><div class="grid">${l.map(card).join('')||'<p class="mut">Nothing matched. Try another word.</p>'}</div></section>`},
+p(id){const p=P.find(x=>x.id==id);if(!p)return V.shop();return `<section class="wrap two"><div>${img(p)}</div><div><span class="tag">${esc(p.cat)}</span><h2 style="margin-top:10px">${esc(p.name)}</h2><div class="pr" style="font-size:22px">${price(p)}${p.old?`<span class="old">${sym()}${cur=='GBP'?p.old:Math.round(p.old*1.25)}</span>`:''}</div><p style="margin:14px 0">${esc(p.desc)}</p><label>Quantity</label><input id="qty" type="number" min="1" value="1" style="width:90px"><p style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap"><button class="btn" onclick="add('${p.id}',Math.max(1,+$('#qty').value||1))">Add to bag</button><button class="btn gh" onclick="fav('${p.id}')">${F.includes(p.id)?'♥ Saved':'♡ Save'}</button><a class="btn alt" target="_blank" rel="noopener" href="https://wa.me/${esc(cfg.whatsapp)}?text=${encodeURIComponent('Hi, I want to order: '+p.name+' ('+price(p)+')')}">Order on WhatsApp</a></p></div></section>`},
+favs(){return `<section class="wrap"><h2>Favourites</h2><div class="grid">${P.filter(p=>F.includes(p.id)).map(card).join('')||'<p class="mut">Tap the heart on any product to save it here.</p>'}</div></section>`},
+cart(){const it=C.map(c=>({...c,p:P.find(p=>p.id==c.id)})).filter(c=>c.p);const tot=it.reduce((a,c)=>a+(cur=='GBP'?c.p.gbp:c.p.usd)*c.n,0);
+ if(!it.length)return `<section class="wrap"><h2>Your bag</h2><p class="mut">Your bag is empty. <a href="#shop" style="text-decoration:underline">Start shopping</a></p></section>`;
+ return `<section class="wrap two"><div><h2>Your bag</h2>${it.map(c=>`<div class="row">${c.p.img?`<img src="${esc(c.p.img)}" alt="">`:'<div class="ph"></div>'}<div style="flex:1"><b>${esc(c.p.name)}</b><div class="mut">${price(c.p)}</div></div><input type="number" min="1" value="${c.n}" style="width:64px" onchange="qty('${c.id}',this.value)"><button class="ib" onclick="rm('${c.id}')">Remove</button></div>`).join('')}<h3 style="margin-top:14px">Total: ${sym()}${tot.toFixed(2)}</h3></div>
+ <div class="box"><h3>Delivery details</h3><label>Full name</label><input id="n"><label>Phone</label><input id="ph" type="tel"><label>Email (optional)</label><input id="em" type="email"><label>Country</label><select id="co"><option>United Kingdom</option><option>United States</option></select><label>Address &amp; postcode / ZIP</label><textarea id="ad" rows="3"></textarea><label>Notes / measurements (optional)</label><input id="nt"><label>Payment method</label><select id="pm"><option>PayPal</option><option>Payoneer</option><option>Pay on WhatsApp</option></select><p style="margin-top:14px;display:grid;gap:10px"><button class="btn" onclick="place(false)">Place order on website</button><button class="btn alt" onclick="place(true)">Order on WhatsApp</button></p></div></section>`},
+orders(){const my=L('mine',[]);const l=O.filter(o=>my.includes(o.id)).reverse();return `<section class="wrap"><h2>My orders</h2>${l.map(o=>`<div class="box"><b>#${o.id}</b> <span class="tag">${o.status}</span> <span class="mut">${new Date(o.date).toLocaleDateString('en-GB')}</span>${o.items.map(i=>`<div class="mut">${i.n} × ${esc(i.name)}</div>`).join('')}<b>Total ${o.sym}${o.total.toFixed(2)}</b></div>`).join('')||'<p class="mut">No orders yet on this device.</p>'}</section>`},
+admin(a){return admin(a)}
+};
+
+const pg=(t,b)=>`<section class="wrap" style="max-width:760px"><h2>${t}</h2>${b}</section>`;
+V.privacy=()=>pg('Privacy policy',`<p>Sherry collects only what is needed to process your order: name, phone, email and delivery address. We use it to deliver your order and contact you about it. We never sell your data.</p><p class="mut" style="margin-top:12px">Payments are handled by PayPal or Payoneer; we do not store card details. You can ask us to delete your data at any time by contacting us on WhatsApp. This site uses your browser storage for your bag, favourites and orders.</p>`);
+V.returns=()=>pg('Returns &amp; shipping',`<p><b>Shipping:</b> UK delivery in 3-5 working days, USA in 7-12 working days. Free delivery on orders over £150 / $190.</p><p style="margin-top:12px"><b>Returns:</b> unworn items can be returned within 30 days in original condition. Contact us first with your order number. Made-to-measure items cannot be returned unless faulty.</p>`);
+V.terms=()=>pg('Terms &amp; conditions',`<p>By ordering you agree that details you give are correct. Prices are in GBP or USD as shown. An order is confirmed once payment is received. We may cancel an order if an item is out of stock and will refund in full.</p>`);
+V.about=()=>pg('About Sherry',`<p>Sherry sells three-piece suits, two-piece suits and overcoats inspired by British tailoring, shipped to customers in the UK and USA.</p>`);
+V.contact=()=>pg('Contact us',`<p>Fastest reply is on WhatsApp.</p><p style="margin-top:14px"><a class="btn alt" target="_blank" rel="noopener" href="https://wa.me/${esc(cfg.whatsapp)}">Chat on WhatsApp</a></p>`);
+function qty(id,v){const i=C.find(c=>c.id==id);i.n=Math.max(1,+v||1);S('cart',C);head();route()}
+function rm(id){C=C.filter(c=>c.id!=id);S('cart',C);head();route()}
+function place(wa){const v=id=>$('#'+id).value.trim();if(!v('n')||!v('ph')||!v('ad'))return toast('Please fill name, phone and address');
+ const items=C.map(c=>{const p=P.find(x=>x.id==c.id);return p&&{id:p.id,name:p.name,n:c.n,unit:cur=='GBP'?p.gbp:p.usd}}).filter(Boolean);
+ const total=items.reduce((a,i)=>a+i.unit*i.n,0);
+ const o={id:'SH'+Date.now().toString().slice(-7),date:Date.now(),status:'New',items,total,sym:sym(),cur,name:v('n'),phone:v('ph'),email:v('em'),country:$('#co').value,addr:v('ad'),note:v('nt'),via:wa?'WhatsApp':'Website',pay:$('#pm').value};
+ O.push(o);S('orders',O);const m=L('mine',[]);m.push(o.id);S('mine',m);C=[];S('cart',C);head();
+ if(wa){const t=`New order ${o.id}\n`+items.map(i=>`${i.n} x ${i.name} (${o.sym}${i.unit})`).join('\n')+`\nPayment: ${o.pay}\nTotal: ${o.sym}${total.toFixed(2)}\nName: ${o.name}\nPhone: ${o.phone}\nCountry: ${o.country}\nAddress: ${o.addr}`+(o.note?`\nNote: ${o.note}`:'');window.open('https://wa.me/'+cfg.whatsapp+'?text='+encodeURIComponent(t),'_blank')}
+ if(o.pay=='PayPal'&&cfg.paypal)window.open(cfg.paypal.replace(/\/$/,'')+'/'+total.toFixed(2)+o.cur,'_blank');
+ if(o.pay=='Payoneer')alert('Order '+o.id+' placed. Send '+o.sym+total.toFixed(2)+' via Payoneer to: '+cfg.payoneer+'. Quote your order number.');
+ toast('Order '+o.id+' placed');go('#orders')}
+
+/* ===== ADMIN ===== */
+let auth=false,editId=null;
+function admin(tab){
+ if(!auth)return `<section class="wrap" style="max-width:380px"><h2>Admin login</h2><div class="box"><label>Password</label><input id="pw" type="password" onkeydown="if(event.key=='Enter')login()"><p style="margin-top:12px"><button class="btn" onclick="login()">Sign in</button></p></div></section>`;
+ tab=tab||'products';const tabs=['products','orders','settings'];
+ const nav=`<div class="chips">${tabs.map(t=>`<span class="chip ${t==tab?'on':''}" onclick="go('#admin/${t}')">${t[0].toUpperCase()+t.slice(1)}</span>`).join('')}<span class="chip" onclick="auth=false;route()">Sign out</span></div>`;
+ if(tab=='orders')return `<section class="wrap"><h2>Orders (${O.length})</h2>${nav}<div style="overflow:auto"><table><tr><th>ID</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th></th></tr>${[...O].reverse().map(o=>`<tr><td>${o.id}<div class="mut">${o.via}</div></td><td>${esc(o.name)}<div class="mut">${esc(o.phone)}<br>${esc(o.country)}<br>${esc(o.addr)}</div></td><td>${o.items.map(i=>`${i.n}× ${esc(i.name)}`).join('<br>')}</td><td>${o.sym}${o.total.toFixed(2)}</td><td><select onchange="ost('${o.id}',this.value)">${['New','Confirmed','Shipped','Delivered','Cancelled'].map(s=>`<option ${s==o.status?'selected':''}>${s}</option>`).join('')}</select></td><td><button class="btn sm" onclick="odel('${o.id}')">Delete</button></td></tr>`).join('')||'<tr><td colspan=6 class="mut">No orders yet.</td></tr>'}</table></div></section>`;
+ if(tab=='settings')return `<section class="wrap" style="max-width:520px"><h2>Settings</h2>${nav}<div class="box"><label>WhatsApp number (country code, no +)</label><input id="s1" value="${esc(cfg.whatsapp)}"><label>Facebook link</label><input id="s2" value="${esc(cfg.facebook)}"><label>YouTube link</label><input id="s3" value="${esc(cfg.youtube)}"><label>WhatsApp Channel link</label><input id="s4" value="${esc(cfg.waChannel)}"><label>PayPal.me link</label><input id="s6" value="${esc(cfg.paypal)}"><label>Payoneer email</label><input id="s7" value="${esc(cfg.payoneer)}"><label>New admin password</label><input id="s5" type="password" placeholder="Leave blank to keep"><p style="margin-top:12px"><button class="btn" onclick="saveCfg()">Save settings</button></p></div></section>`;
+ const e=P.find(p=>p.id==editId)||{name:'',gbp:'',usd:'',old:'',cat:'',col:'',desc:'',img:''};
+ return `<section class="wrap"><h2>Products (${P.length})</h2>${nav}<div class="two"><div class="box"><h3>${editId?'Edit product':'Add product'}</h3><label>Name</label><input id="a1" value="${esc(e.name)}"><label>Price £ (GBP)</label><input id="a2" type="number" step="0.01" value="${e.gbp}"><label>Price $ (USD)</label><input id="a3" type="number" step="0.01" value="${e.usd}"><label>Old price £ (optional, for sale)</label><input id="a4" type="number" step="0.01" value="${e.old||''}"><label>Category</label><input id="a5" value="${esc(e.cat)}"><label>Collection</label><input id="a6" value="${esc(e.col)}"><label>Description</label><textarea id="a7" rows="3">${esc(e.desc)}</textarea><label>Image link or upload</label><input id="a8" value="${e.img&&e.img.startsWith('data:')?'':esc(e.img)}" placeholder="https://..."><input id="a9" type="file" accept="image/*" style="margin-top:6px"><p style="margin-top:12px;display:flex;gap:8px"><button class="btn" onclick="saveP()">${editId?'Update':'Add product'}</button>${editId?'<button class="btn gh" onclick="editId=null;route()">Cancel</button>':''}</p></div>
+ <div>${P.map(p=>`<div class="row">${p.img?`<img src="${esc(p.img)}" alt="">`:'<div class="ph"></div>'}<div style="flex:1"><b>${esc(p.name)}</b><div class="mut">£${p.gbp} / $${p.usd} · ${esc(p.cat)}</div></div><button class="btn sm gh" onclick="editId='${p.id}';route();scrollTo(0,0)">Edit</button><button class="btn sm" onclick="pdel('${p.id}')">Delete</button></div>`).join('')}</div></div></section>`}
+function login(){if($('#pw').value==cfg.adminPass){auth=true;route()}else toast('Wrong password')}
+function ost(id,s){O.find(o=>o.id==id).status=s;S('orders',O);toast('Status updated')}
+function odel(id){if(confirm('Delete this order?')){O=O.filter(o=>o.id!=id);S('orders',O);route()}}
+function pdel(id){if(confirm('Delete this product?')){P=P.filter(p=>p.id!=id);S('products',P);route()}}
+function saveCfg(){cfg.whatsapp=$('#s1').value.trim();cfg.facebook=$('#s2').value.trim();cfg.youtube=$('#s3').value.trim();cfg.waChannel=$('#s4').value.trim();cfg.paypal=$('#s6').value.trim();cfg.payoneer=$('#s7').value.trim();if($('#s5').value)cfg.adminPass=$('#s5').value;S('cfg',cfg);head();toast('Settings saved')}
+function shrink(f){return new Promise(r=>{const fr=new FileReader();fr.onload=()=>{const i=new Image();i.onload=()=>{const k=Math.min(1,700/Math.max(i.width,i.height)),c=document.createElement('canvas');c.width=i.width*k;c.height=i.height*k;c.getContext('2d').drawImage(i,0,0,c.width,c.height);r(c.toDataURL('image/jpeg',.8))};i.src=fr.result};fr.readAsDataURL(f)})}
+async function saveP(){const f=$('#a9').files[0];let im=$('#a8').value.trim();if(f)im=await shrink(f);else if(!im&&editId)im=P.find(p=>p.id==editId).img;
+ const p={id:editId||'p'+Date.now(),name:$('#a1').value.trim(),gbp:+$('#a2').value||0,usd:+$('#a3').value||0,old:+$('#a4').value||0,cat:$('#a5').value.trim()||'General',col:$('#a6').value.trim(),desc:$('#a7').value.trim(),img:im};
+ if(!p.name)return toast('Enter a product name');
+ editId?P=P.map(x=>x.id==editId?p:x):P.unshift(p);editId=null;S('products',P);toast('Product saved');route()}
+
+function route(){const h=location.hash.slice(1).split('/');const f=V[h[0]||'home']||V.home;$('#app').innerHTML=f(h.slice(1).join('/'),null);head();window.scrollTo(0,0)}
+addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
